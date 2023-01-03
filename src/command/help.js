@@ -10,30 +10,20 @@
  */
 
 export default function help(client, msg) {
-  const text = `
-Selamat Datang 👋
+  const text = `*Selamat Datang 👋*
 
-*Gunakan command - command dibawah untuk menggunakan
+*Berikut adalah daftar command yang tersedia:*
 
-1. *!help*
-untuk mengeluarkan teks ini
+1. _!help_
+2. _!ping_
+3. _!sticker_
+4. _!candaan_
+5. _!genimg_
 
-2. *!ping*
-untuk melakukan test koneksi
 
-3. *!sticker*
-untuk membuat sticker, jangan lupa sertakan gambarnya
+Untuk informasi penggunaan setiap command yang tersedia silahkan ketik _?info <nama perintah>_
 
-4. *!candaan*
-untuk memberikan sebuah candaan atau jokes bapak bapak
-contoh:
-  *_!candaan type:image_*
-  *_!candaan type:text_*
-
-5. *!genimg _<prompt>_*
-untuk mengenerate sebuah image menggunakan AI, gunakan bahasa inggris
-contoh: 
-  *_!genimg A cyberpunk monster in a control room_*
+Contoh: *_?info !candaan_*
 `;
 
   client.sendMessage(msg.from, text);

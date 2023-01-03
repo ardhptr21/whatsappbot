@@ -11,7 +11,7 @@ export default async function sticker(client, msg) {
   if (!msg.hasMedia) return client.sendMessage(msg.from, '❌ Silahkan kirim sebuah gambar untuk membuat sticker!');
 
   try {
-    client.sendMessage(msg.from, '🔃 Sedang diproses, mohon tunggu sebentar...');
+    client.sendMessage(msg.from, '⏳ Sedang diproses, mohon tunggu sebentar...');
 
     const media = await msg.downloadMedia();
 

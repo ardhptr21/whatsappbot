@@ -15,7 +15,7 @@ export default async function genimg(client, msg) {
   if (!prompt.length) return client.sendMessage(msg.from, '❌ harap masukkan deskripsi gambar yang akan digenerate');
 
   try {
-    client.sendMessage(msg.from, '🔃 Sedang melakukan generate...');
+    client.sendMessage(msg.from, '⏳ Sedang diproses, mohon tunggu sebentar...');
     const res = await openai.createImage({ prompt, n: 1, size: '256x256' });
     const media = await wweb.MessageMedia.fromUrl(res.data.data[0].url);
     client.sendMessage(msg.from, media);
